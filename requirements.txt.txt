@@ -1,0 +1,19 @@
+Install python 3.10 or higher.
+
+Install ngrok and complete the setup on local sustem.
+1)setx path "%path%;C:\path\to\ngrok"
+2)install auth token from ngrok website.
+3)ngrok http 5000 in ngrok terminal.
+
+pip install Flask,numpy,pandas,sklearn,openpyxl,scikit-learn,ngrok(and other ngrok directories)
+
+runn app.py.
+
+open a new terminal and execute : ngrok http 5000 for global server setup and link generation.
+copy the forwarding link.
+
+run in any browser>Visit Site
+
+enter the readings>ML model works!
+
+THANKYOU!

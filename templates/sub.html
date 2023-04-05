@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Model: Health Monitoring System</title>
+    <style>
+        /* For index.html */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #45a049;
+            margin: 0;
+            padding: 0;
+        }
+/* 
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center; */
+        }
+
+        .header {
+            background-color: #3399FF;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .result {
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .result p {
+            color: #333333;
+            line-height: 1.5;
+        }
+        .result b {
+            color: #0077CC;
+        }
+
+        /* For form.html */
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #333333;
+        }
+
+        .container {
+            background-color: #F2F2F2;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+        <!-- <div class="header">
+            <h1>ML Model: Health Monitoring System</h1>
+        </div>
+        <div class="container">
+            <h2>Disease Prediction Result</h2>
+            {% if fp1 == 0 and hp1 == 0 and sp1 == 0 and pp1 == 0 %}
+                <p style="text-align: center;">ALL OKAY !</p>
+            {% else %}
+                {% if fp1 %}
+                <div class="result">
+                    <p>You may have Fever. Here are the remedies :</p>
+                </div>
+                {% endif %}
+
+                {% if hp1 %}
+                <div class="result">
+                    <p>You may have Hypoxia. Here are the remedies :</p>
+                    <p><b>Herbal Tulsi Kadha:</b> Take about 20 basil leaves and boil them, then add 1 teaspoon of crushed ginger in the strained tulsi water, and boil until the solution gets reduced to half. Add a little honey and drink this tea two or three times a day for three days to get relief.</p>
+                    <p><b>Turmeric milk:</b> Turmeric contains balancing qualities for all three doshas: vata, pitta, kapha. Half tea spoon Haldi (turmeric) powder in 150 ml hot milk - once or twice a day.</p>
+                </div>
+                {% endif %}
+                {% if sp1 %}
+                <div class="result">
+                    <p>You may have Stress: {{ sp1 }}</p>
+                </div>
+                {% endif %}
+                {% if pp1 %}
+                <div class="result">
+                    <p>You may have Pneumonia: {{ pp1 }}</p>
+                </div>
+                {% endif %}
+            {% endif %}
+        </div>
+    -->
+
+
+    <div class="header">
+        <h1>ML Model: Health Monitoring System</h1>
+    </div>
+
+    <div class="container">
+        <h2>Disease Prediction Result</h2>
+
+        {% if fp1 == 0 and hp1 == 0 and sp1 == 0 and pp1 == 0 %}
+            <p style="text-align: center;">ALL OKAY !</p>
+
+        {% else %}
+            {% if fp1 %}
+            <div class="result">
+                <p><b>You may have FEVER. Here are the remedies :</b></p>
+                <p><b>Herbal Tulsi Kadha:</b> Take about 20 basil leaves and boil them, then add 1 teaspoon of crushed ginger in the strained tulsi water, and boil until the solution gets reduced to half. Add a little honey and drink this tea two or three times a day for three days to get relief.</p>
+                <p><b>Turmeric milk:</b> Turmeric contains balancing qualities for all three doshas: vata, pitta, kapha. Half tea spoon Haldi (turmeric) powder in 150 ml hot milk - once or twice a day.</p>
+            </div>
+            {% endif %}
+
+            {% if hp1 %}
+            <div class="result">
+                <p><b>You may have HYPOXIA. Here are the remedies :</b></p>
+                <p><b>Deep breathing:</b> Lie down and place the hands on the abdomen. Breathe in deeply through the nose, expanding the abdomen and letting the lungs fill with air. Hold the breath for a couple of seconds. Breathe out slowly through the mouth, emptying the lungs.</p>
+                <p><b>Inhaling steam:</b> Inhaling steam can help keep a person’s nasal passages clear, which can help them breathe more easily. Heat and moisture from steam may also break down mucus in the lungs, which might also reduce breathlessness.</p>
+            </div>
+            {% endif %}
+
+            {% if sp1 %}
+            <div class="result">
+                <p><b>You may have STRESS. Here are the remedies :</b></p>
+                <p><b>Ashwagandha:</b> Ashwagandha is an excellent natural adaptogen that helps the body adapt to stressful and emotional situations. It also helps boost energy, stamina and endurance power. It also promotes sound sleep.</p>
+                <p><b>Bhringraj:</b> Bhringraj is a powerful ingredient in Ayurveda that can be taken as tea and also used in oils for massage. It promotes blood circulation and has a relaxing effect on the brain and helps calm the mind thereby reducing stress.</p>
+            </div>
+            {% endif %}
+
+            {% if pp1 %}
+            <div class="result">
+            <p><b>You may have PNEUMONIA. Here are the remedies :</b></p>
+            <p><b>Avoid cold food and drinks:</b> Consuming cold food and drinks can make it harder for the body to fight off infections. It is better to consume warm and nourishing food and drinks.</p>
+            <p><b>Stay hydrated:</b> Drink plenty of warm fluids like soups, broths, and herbal teas to stay hydrated and to help loosen mucus in the chest.</p>
+            </div>
+            {% endif %}
+        {% endif %}
+    </div>
+            
+</body>
+</html>
